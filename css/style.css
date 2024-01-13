@@ -149,6 +149,45 @@
         opacity: 1;
     }
 }
+    h2 {
+    font-size: 24px;
+}
+
+@media (max-width: 425px) {
+    h2 {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 426px) and (max-width: 576px) {
+    h2 {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    h2 {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    h2 {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+    h2 {
+        font-size: 26px;
+    }
+}
+
+@media (min-width: 1201px) {
+    h2 {
+        font-size: 28px;
+    }
+}
 
 
 /*** Header carousel ***/
@@ -257,6 +296,7 @@
         border: 4px solid grey;
     }
 
+
 /* gallery end */
 
 
@@ -291,14 +331,9 @@
     transform: scale(1.1);
 }
 
-
-/*** Team ***/
-.team-item img {
-    transition: .5s;
-}
-
-.team-item:hover img {
-    transform: scale(1.1);
+/* shedules */
+.card{
+    background-color: #cbedef;
 }
 
 
