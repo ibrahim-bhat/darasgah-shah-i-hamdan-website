@@ -331,6 +331,37 @@
     transform: scale(1.1);
 }
 
+/* poster */
+   @media (max-width: 576px) {
+        img {
+            max-height: 10vh;
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        img {
+            height: 500px;
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 992px) {
+        img {
+            height: 600px;
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        /* Cpx */
+        img {
+            height: 700px;
+            width: 100%;
+   
+        }
+    }
+
 /* shedules */
 .card{
     background-color: #cbedef;
