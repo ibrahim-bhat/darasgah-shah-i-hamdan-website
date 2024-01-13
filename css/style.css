@@ -150,7 +150,13 @@ h2 {
   font-size: 24px;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 370px) {
+  h2 {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 371px) and (max-width: 425px) {
   h2 {
     font-size: 16px;
   }
@@ -185,6 +191,7 @@ h2 {
     font-size: 28px;
   }
 }
+
 
 /*** Header carousel ***/
 @media (max-width: 768px) {
