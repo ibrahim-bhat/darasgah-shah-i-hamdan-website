@@ -369,6 +369,17 @@ h2 {
 .course-item:hover img {
   transform: scale(1.1);
 }
+.cards-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Optionally, set the height of the parent container */
+}
+
+.icon-centered {
+    /* Remove the 'img-fluid' class since it's not an image */
+    font-size: 40px;
+}
 
 /* poster */
 @media (max-width: 576px) {
