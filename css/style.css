@@ -35,7 +35,6 @@
   opacity: 1;
 }
 
-
 /*** Button ***/
 .btn {
   font-family: "Nunito", sans-serif;
@@ -109,25 +108,25 @@
   }
 }
 /* nav logo media queries */
-    nav img{
-      width: 80px; 
-      height: auto;
-    }
-  @media (max-width: 500px) {
-    nav img {
-      width: 50px;
-    }
+nav img {
+  width: 80px;
+  height: auto;
+}
+@media (max-width: 500px) {
+  nav img {
+    width: 50px;
   }
-    @media (max-width: 450px) {
-    nav img {
-      width: 40px;
-    }
+}
+@media (max-width: 450px) {
+  nav img {
+    width: 40px;
   }
-    @media (max-width: 300px) {
-    nav img {
-      width: 40px;
-    }
+}
+@media (max-width: 300px) {
+  nav img {
+    width: 40px;
   }
+}
 
 .navbar-light .navbar-brand,
 .navbar-light a.btn {
@@ -172,16 +171,15 @@ h2 {
 }
 
 @media (max-width: 576px) {
-    .navbar-toggler {
-      font-size: 14px;
-    }
-
+  .navbar-toggler {
+    font-size: 14px;
   }
-  @media (min-width: 577px) and (max-width: 768px) {
-    .navbar-toggler {
-      font-size: 16px;
-    }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  .navbar-toggler {
+    font-size: 16px;
   }
+}
 @media (max-width: 380px) {
   h2 {
     font-size: 13px;
@@ -189,11 +187,9 @@ h2 {
 }
 @media (max-width: 440px) {
   .navbar-toggler {
-      font-size: 11px;
-    }
+    font-size: 11px;
+  }
 }
-
-
 
 @media (min-width: 371px) and (max-width: 425px) {
   h2 {
@@ -230,7 +226,6 @@ h2 {
     font-size: 28px;
   }
 }
-
 
 /*** Header carousel ***/
 @media (max-width: 768px) {
@@ -370,15 +365,14 @@ h2 {
   transform: scale(1.1);
 }
 .cards-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%; /* Optionally, set the height of the parent container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .icon-centered {
-    /* Remove the 'img-fluid' class since it's not an image */
-    font-size: 40px;
+  font-size: 40px;
 }
 
 /* poster */
@@ -390,7 +384,7 @@ h2 {
 }
 
 @media (max-width: 768px) {
- #posterimg {
+  #posterimg {
     height: 500px;
     width: 100%;
   }
@@ -561,8 +555,8 @@ h2 {
   padding-right: 0;
   border-right: none;
 }
- /* map */
- @media (max-width: 575.98px) {
+/* map */
+@media (max-width: 575.98px) {
   iframe {
     width: 100%;
     height: 200px;
@@ -582,4 +576,3 @@ h2 {
     height: 300px;
   }
 }
-
