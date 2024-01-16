@@ -107,3 +107,26 @@
     
 })(jQuery);
 
+//formspree blocker
+async function submitForm() {
+  // Get form element
+  var form = document.getElementById("myForm");
+
+  // Get form data
+  var formData = new FormData(form);
+
+  // Send form data to Formspree using fetch
+  await fetch("https://formspree.io/f/xyyrznyp", {
+    method: "POST",
+    body: formData,
+    headers: {
+      Accept: "application/json",
+    },
+  });
+
+  // Display the thank-you message
+  document.getElementById("thankYouMessage").style.display = "block";
+
+  // Reset the form
+  form.reset();
+}
