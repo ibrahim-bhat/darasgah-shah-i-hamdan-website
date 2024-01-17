@@ -493,6 +493,11 @@ h2 {
 .forms-card p{
   color: #52565b;
 }
+/* @media (max-width: 1004px) {
+  .inside-forms{
+   height: 3926;
+  }
+} */
 /*** Footer ***/
 .footer .btn.btn-social {
   margin-right: 5px;
