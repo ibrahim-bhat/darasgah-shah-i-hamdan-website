@@ -489,7 +489,10 @@ h2 {
   background: var(--primary);
   border-color: var(--primary);
 }
-
+/* forms cards */
+.forms-card p{
+  color: #52565b;
+}
 /*** Footer ***/
 .footer .btn.btn-social {
   margin-right: 5px;
