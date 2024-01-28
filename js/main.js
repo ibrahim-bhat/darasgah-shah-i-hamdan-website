@@ -140,3 +140,39 @@ async function submitForm() {
   form.reset();
 }
 
+
+
+    // Function to animate number counting
+    function animateCounting(target, start, end, duration) {
+        let range = end - start;
+        let current = start;
+        let increment = end > start ? 1 : -1;
+        let stepTime = Math.abs(Math.floor(duration / range));
+        let element = document.getElementById(target);
+        let timer = setInterval(function() {
+            current += increment;
+            element.textContent = current;
+            if (current == end) {
+                clearInterval(timer);
+            }
+        }, stepTime);
+    }
+
+    // Intersection Observer for scrolling
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Start the counting animation when the element is in the viewport
+                animateCounting('count1', 9300, 9950, 1000);
+                animateCounting('count2', 0, 120, 2000);
+                animateCounting('count3', 0, 76, 2000);
+                observer.unobserve(entry.target); // Stop observing once triggered
+            }
+        });
+    }, { threshold: 0.5 });
+
+    // Target elements for observation
+    const targets = document.querySelectorAll('.students-card');
+    targets.forEach(target => {
+        observer.observe(target);
+    });

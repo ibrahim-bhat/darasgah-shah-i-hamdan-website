@@ -34,7 +34,6 @@
   opacity: 1;
 }
 
-
 /*** Button ***/
 .btn {
   font-family: "Nunito", sans-serif;
@@ -287,7 +286,11 @@ h2 {
 .breadcrumb-item + .breadcrumb-item::before {
   color: var(--light);
 }
-
+/* history */
+.paragraph-heading {
+  font-size: 2rem;
+  padding-top: 50px;
+}
 /*** Section Title ***/
 .section-title {
   position: relative;
@@ -374,36 +377,43 @@ h2 {
 .icon-centered {
   font-size: 40px;
 }
+/* total students */
 
-/* poster */
+
+.students-card span {
+    font-size: 4rem;
+    font-weight: bold;
+
+}
+
+.students-card h2 {
+    font-size: 1.25rem;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+/* Media queries for adjusting text size */
 @media (max-width: 576px) {
-  #posterimg {
-    max-height: 10vh;
-    width: 100%;
-  }
+    .students-card span {
+        font-size: 1.5rem;
+    }
+
+    .students-card h2 {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 450px) {
+    .students-card span {
+        font-size: 1.5rem;
+    }
+
+    .students-card h2 {
+        font-size: 0.6rem;
+    }
 }
 
-@media (max-width: 768px) {
-  #posterimg {
-    height: 500px;
-    width: 100%;
-  }
-}
 
-@media (max-width: 992px) {
-  #posterimg {
-    height: 600px;
-    width: 100%;
-  }
-}
 
-@media (max-width: 1200px) {
-  /* Cpx */
-  #posterimg {
-    height: 700px;
-    width: 100%;
-  }
-}
 
 /* shedules */
 .card {
@@ -490,7 +500,7 @@ h2 {
   border-color: var(--primary);
 }
 /* forms cards */
-.forms-card p{
+.forms-card p {
   color: #52565b;
 }
 /* @media (max-width: 1004px) {
