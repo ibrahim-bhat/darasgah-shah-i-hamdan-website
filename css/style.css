@@ -16,7 +16,7 @@
   position: fixed;
   display: none;
   right: 45px;
-  bottom: 45px;
+  bottom: 120px;
   z-index: 99;
 }
 
@@ -332,7 +332,11 @@ h2 {
   width: calc(100% + 60px);
   left: 0;
 }
-
+@media (max-width: 500px) {
+  .paragraph-heading {
+    font-size: 1.2rem;
+  }
+}
 /* gallery */
 
 .galleryimage {
@@ -382,74 +386,48 @@ h2 {
 }
 /* total students */
 
-
 .students-card span {
-    font-size: 4rem;
-    font-weight: bold;
-
+  font-size: 4rem;
+  font-weight: bold;
 }
 
 .students-card h2 {
-    font-size: 1.25rem;
-    margin-top: 10px;
-    margin-bottom: 0;
+  font-size: 1.25rem;
+  margin-top: 10px;
+  margin-bottom: 0;
 }
 
 /* Media queries for adjusting text size */
 @media (max-width: 576px) {
-    .students-card span {
-        font-size: 1.5rem;
-    }
+  .students-card span {
+    font-size: 1.5rem;
+  }
 
-    .students-card h2 {
-        font-size: 1rem;
-    }
+  .students-card h2 {
+    font-size: 1rem;
+  }
 }
 @media (max-width: 450px) {
-    .students-card span {
-        font-size: 1.5rem;
-    }
+  .students-card span {
+    font-size: 1.5rem;
+  }
 
-    .students-card h2 {
-        font-size: 0.6rem;
-    }
+  .students-card h2 {
+    font-size: 0.6rem;
+  }
 }
 
-/* poster */  
-  #posterimg {
+/* poster */
+#posterimg {
   height: 322px;
-  max-width: 100%;
+  max-width: 100vw;
   display: block;
   margin: 0 auto;
 }
 /* Media queries for adjusting height */
-@media (max-width: 576px) {
+@media (max-width: 410px) {
   #posterimg {
-    height: 150px; 
-  }
-}
-
-@media (min-width: 577px) and (max-width: 768px) {
-  #posterimg {
-    height: 200px; 
-  }
-}
-
-@media (min-width: 769px) and (max-width: 992px) {
-  #posterimg {
-    height: 250px; 
-  }
-}
-
-@media (min-width: 993px) and (max-width: 1200px) {
-  #posterimg {
-    height: 280px; 
-  }
-}
-
-@media (min-width: 1201px) {
-  #posterimg {
-    height: 322px; 
+    height: 60vh;
   }
 }
 
