@@ -165,7 +165,7 @@ async function submitForm() {
                 // Start the counting animation when the element is in the viewport
                 animateCounting('count1', 9300, 9950, 1000);
                 animateCounting('count2', 0, 120, 2000);
-                animateCounting('count3', 0, 76, 2000);
+                animateCounting("count3", 0, 49, 3000);
                 observer.unobserve(entry.target); // Stop observing once triggered
             }
         });
@@ -176,3 +176,8 @@ async function submitForm() {
     targets.forEach(target => {
         observer.observe(target);
     });
+
+
+
+
+

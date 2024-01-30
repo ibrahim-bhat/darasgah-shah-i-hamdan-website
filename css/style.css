@@ -286,6 +286,9 @@ h2 {
 .breadcrumb-item + .breadcrumb-item::before {
   color: var(--light);
 }
+
+/* about read more */
+
 /* history */
 .paragraph-heading {
   font-size: 2rem;
@@ -412,8 +415,43 @@ h2 {
     }
 }
 
+/* poster */  
+  #posterimg {
+  height: 322px;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+/* Media queries for adjusting height */
+@media (max-width: 576px) {
+  #posterimg {
+    height: 150px; 
+  }
+}
 
+@media (min-width: 577px) and (max-width: 768px) {
+  #posterimg {
+    height: 200px; 
+  }
+}
 
+@media (min-width: 769px) and (max-width: 992px) {
+  #posterimg {
+    height: 250px; 
+  }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+  #posterimg {
+    height: 280px; 
+  }
+}
+
+@media (min-width: 1201px) {
+  #posterimg {
+    height: 322px; 
+  }
+}
 
 /* shedules */
 .card {
