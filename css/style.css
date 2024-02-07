@@ -289,6 +289,29 @@ h2 {
 
 /* about read more */
 
+/* rules and regulations */
+.rules-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.rules-list li {
+    position: relative;
+    padding-left: 30px;
+    font-size: 1.1rem;
+}
+
+.rules-list li::before {
+    content: "\f058";
+    font-family: FontAwesome;
+    position: absolute;
+    left: 0;
+    top: 4px;
+    font-size: 1.2rem;
+    color: #007bff; /* Change color as needed */
+}
+
+
 /* history */
 .paragraph-heading {
   font-size: 2rem;
@@ -342,6 +365,80 @@ h2 {
 .galleryimage {
   border: 4px solid grey;
 }
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 70%;
+  max-width: 800px; 
+  position: relative;
+  z-index: 99999;
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.modal img {
+  max-width: 100%; /* Adjust the value as needed */
+  height: auto;
+}
+@media screen and (max-width: 500px) {
+  .modal{
+    padding-top: 40vh;
+  }
+
+    .modal-content{
+      width: 100%;
+      padding: 1px;
+    }
+}
+.blur-background {
+  filter: blur(160px); 
+}
+.close {
+    font-size: 70px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 9999;
+    cursor: pointer;
+    color: red;
+}
+
+@media screen and (max-width: 768px) {
+    .close {
+        font-size: 50px;
+        top: 220px;
+    }
+}
+
 
 /* gallery end */
 
