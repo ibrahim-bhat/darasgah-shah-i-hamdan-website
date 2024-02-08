@@ -183,30 +183,26 @@ function toggleAdditionalContent() {
   }
 }
 
- // Get the modal
-  var modal = document.getElementById("photoModal");
+ // Open the photo modal
+  function openModal(event, imgElement) {
+    var modal = document.getElementById("photoModal");
+    var modalImg = document.getElementById("modalImg");
+    modal.style.display = "block";
+    modalImg.src = imgElement.src;
 
-  // Get the image and insert it inside the modal
-  var images = document.querySelectorAll(".tm-gallery img");
-  var modalImg = document.getElementById("modalImg");
-  images.forEach(function(img) {
-    img.onclick = function() {
-      modal.style.display = "block";
-      modalImg.src = this.src;
+    // Prevent default action (e.g., following the link) on some browsers
+    if (event.preventDefault) {
+      event.preventDefault();
+    } else {
+      event.returnValue = false; // For IE
     }
-  });
-
-  // Get the <span> element that closes the modal
-  var span = document.getElementsByClassName("close")[0];
-
-  // When the user clicks on <span> (x), close the modal
-  span.onclick = function() {
-    modal.style.display = "none";
   }
 
-  // Close the modal when clicking outside of the image or the close button
-  modal.addEventListener('click', function(event) {
-    if (event.target === this) {
+  var modal = document.getElementById("photoModal");
+  var closeBtn = modal.querySelector(".close");
+
+  modal.onclick = function (event) {
+    if (event.target === modal || event.target === closeBtn) {
       modal.style.display = "none";
     }
-  });
+  };
