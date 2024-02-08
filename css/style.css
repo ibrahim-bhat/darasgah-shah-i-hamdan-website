@@ -361,6 +361,11 @@ h2 {
   }
 }
 /* gallery */
+@media (max-width : 420px) {
+  .tm-gallery h5{
+  font-size: 10px;
+}
+}
 
 .galleryimage {
   border: 4px solid grey;
@@ -516,17 +521,14 @@ h2 {
 
 /* poster */
 #posterimg {
-  height: 322px;
-  max-width: 100vw;
+  max-height: 322px; /* Set maximum height */
+  width: auto; /* Allow width to adjust */
+  max-width: 100%; /* Ensure image doesn't exceed container width */
   display: block;
   margin: 0 auto;
 }
-/* Media queries for adjusting height */
-@media (max-width: 410px) {
-  #posterimg {
-    height: 60vh;
-  }
-}
+
+
 
 /* shedules */
 .card {
