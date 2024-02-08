@@ -230,14 +230,14 @@ h2 {
 @media (max-width: 768px) {
   .header-carousel .owl-carousel-item {
     position: relative;
-    min-height: 500px;
+    /* min-height: 500px; */
   }
 
   .header-carousel .owl-carousel-item img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
     object-fit: cover;
+      width: auto; /* Allow width to adjust */
+    max-width: 100%; 
+    display: block;
   }
 }
 
@@ -286,6 +286,7 @@ h2 {
 .breadcrumb-item + .breadcrumb-item::before {
   color: var(--light);
 }
+
 
 /* about read more */
 
