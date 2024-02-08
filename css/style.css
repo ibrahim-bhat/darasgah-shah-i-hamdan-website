@@ -521,11 +521,10 @@ h2 {
 
 /* poster */
 #posterimg {
-  max-height: 322px; /* Set maximum height */
+ 
   width: auto; /* Allow width to adjust */
-  max-width: 100%; /* Ensure image doesn't exceed container width */
+  max-width: 100%; 
   display: block;
-  margin: 0 auto;
 }
 
 
