@@ -90,14 +90,10 @@
     <!-- Header End -->
 
     <!-- Admission Form Start -->
-    <div class="container mt-5">
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <form
-            action="https://formspree.io/f/mdoqznna"
-            method="POST"
-            enctype="multipart/form-data"
-          >
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <form id="myForm" action="https://formspree.io/f/mdoqznna" method="POST" enctype="multipart/form-data">
             <div class="mb-3">
               <label for="name" class="form-label">Name</label>
               <input
@@ -184,6 +180,16 @@
               />
             </div>
             <div class="mb-3">
+              <label for="whatsapp" class="form-label">WhatsApp Number</label>
+              <input
+                type="tel"
+                class="form-control"
+                id="whatsapp"
+                name="whatsapp"
+                required
+              />
+            </div>
+            <div class="mb-3">
               <label for="email" class="form-label">Email ID</label>
               <input
                 type="email"
@@ -197,39 +203,110 @@
               <label for="course" class="form-label">Preferred Course</label>
               <select class="form-select" id="course" name="course" required>
                 <option value="" selected disabled>Select Course</option>
-                <option value="Course 1">Al-Quran</option>
-                <option value="Course 2">Tajweed</option>
-                <option value="Course 2">Hifiz Al-Quran</option>
-                <option value="Course 2">Tasirul-Quran</option>
+                <option value="Al-Quran">Al-Quran</option>
+                <option value="Tajweed">Tajweed</option>
+                <option value="Hifiz Al-Quran">Hifiz Al-Quran</option>
+                <option value="Tasirul-Quran">Tasirul-Quran</option>
+                <option value="Tasirul-Quran">
+                  Kashmiri Quran Translation/Tafseer
+                </option>
               </select>
             </div>
+            <!-- <div class="mb-3">
+              <label for="photo" class="form-label">Passport Size Photo</label>
+              <input
+                type="file"
+                class="form-control"
+                id="photo"
+                name="photo"
+                accept="image/*"
+                required
+              />
+            </div> -->
             <div class="mb-3">
-              <label for="message" class="form-label">Additional Message</label>
+              <label for="quran-institute" class="form-label"
+                >Whether you have read the Holy Quran or its language (Arabic)
+                from any institute/Darasgah, if so please mention below the full
+                name and address of that Institute/Darasgah below.</label
+              >
               <textarea
                 class="form-control"
-                id="message"
-                name="message"
+                id="quran-institute"
+                name="quran-institute"
                 rows="3"
               ></textarea>
             </div>
-
+            <div class="mb-3">
+              <label for="reason" class="form-label"
+                >So If you have read the Holy Quran or its language (Arabic)
+                from any Instiute/Darasgah, then please mention Below, why you
+                are doing so again in this institute.</label
+              >
+              <textarea
+                class="form-control"
+                id="reason"
+                name="reason"
+                rows="3"
+              ></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="parent-consent" class="form-label"
+                >Parent/Guardian Consent (Name)</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="parent-consent"
+                name="parent-consent"
+                required
+              />
+            </div>
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
+    <script>
+  // Intercept form submission
+  document.getElementById("myForm").addEventListener("submit", function(event) {
+    // Prevent default form submission
+    event.preventDefault();
 
+    // Collect form data
+    var formData = new FormData(this);
 
-
-
-
+    // Submit form data asynchronously
+    fetch(this.action, {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    })
+    .then(response => {
+      if (response.ok) {
+        // Handle successful submission (e.g., show a success message)
+        alert("Form submitted successfully!");
+        // You can redirect or perform any other action here
+      } else {
+        // Handle submission error (e.g., show an error message)
+        alert("Form submission failed. Please try again later.");
+      }
+    })
+    .catch(error => {
+      // Handle network error
+      console.error('Error:', error);
+      alert("Form submission failed. Please check your internet connection and try again.");
+    });
+  });
+</script>
 
     <!-- Admission Form End -->
     <!-- Description Section -->
     <div class="container mt-5">
       <div class="row justify-content-center">
         <div class="col-lg-8">
-          <h5>Note: Please, read the course details carefully.</h5>
+          <h5>Note: Our specical learning courses of Holy Quran .</h5>
           <p>Courses:</p>
           <ol>
             <li>Learn the Holy Quran in a Day (Sunday only).</li>
@@ -240,7 +317,7 @@
             <li>Learn the Holy Quran in 2 years.</li>
             <li>Learn the Holy Quran in Systematic order (Regular Classes).</li>
           </ol>
-          <p>Eligibility:</p>
+          <p>Eligibility as per above serial number:</p>
           <ol>
             <li>Age above 15 yrs/Entrance test for admission.</li>
             <li>Age above 15 yrs/Entrance test for admission.</li>
